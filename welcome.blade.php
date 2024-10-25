@@ -87,7 +87,7 @@
                 <a href="#Gallery" class="nav-link">GALLERY</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">CONTACT</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
             </li>
             <button>
                 <span class="span-mother" id="navBtn">
@@ -105,7 +105,7 @@
                 </span>
             </button>
 
-            <button class="animated-button">
+            <button class="animated-button" id="button">
                 <span class="text-animation">
                     <span>L</span>
                     <span>O</span>
@@ -124,16 +124,65 @@
                 </span>
             </button>
         </ul>
+        
     </div>
 </nav>
 <section class="text-center">
   <main>
+ 
+  <div class="popup">
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="popup-content">
+                <div class="close-icon close">
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                </div>
+                <form id="login-form">
+                    <p class="form-title">Login</p>
+                    <div class="input-box">
+                        <input required placeholder="Username" type="text" />
+                    </div>
+                    <div class="input-box">
+                        <input required placeholder="Password" type="password" />
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox" />Remember Me</label>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <button class="login-button" type="submit">Login</button>
+                    <div class="register-link">
+                        <p>Don’t have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+                    </div>
+                </form>
+
+                <form id="signup-form" style="display: none;">
+                    <p class="form-title">Sign Up</p>
+                    <div class="input-box">
+                        <input required placeholder="Full Name" type="text" />
+                    </div>
+                    <div class="input-box">
+                        <input required placeholder="Email Address" type="email" />
+                    </div>
+                    <div class="input-box">
+                        <input required placeholder="Password" type="password" />
+                    </div>
+                    <button class="login-button" type="submit">Sign Up</button>
+                    <div class="register-link">
+                        <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="text-center custom-text">
       <h3>Welcome to Kids Castle Montessori!</h3>
+      
       <h1>A castle of education, love, and care</h1>
     </div>
   </main>
 </section>
+
 <!-- about us page -->
 <section class="about-us d-flex justify-content-center align-items-center" id="AboutUs">
   <div class="container">
@@ -250,7 +299,7 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-md-4">
-              <div class="card custom-card shadow-lg">
+              <div class="card custom-card ">
                 <div class="card-body">
                   <p class="card-text">"Kids Castle Montessori has been a wonderful place for our child! The play-based learning keeps them engaged, and we've seen so much growth in their confidence and skills."</p>
                   <div class="stars text-warning">★★★★★</div>
@@ -259,7 +308,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card custom-card shadow-lg">
+              <div class="card custom-card ">
                 <div class="card-body">
                   <p class="card-text">"Kids Castle Montessori has been a wonderful place for our child! The play-based learning keeps them engaged, and we've seen so much growth in their confidence and skills."</p>
                   <div class="stars text-warning">★★★★★</div>
@@ -268,7 +317,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card custom-card shadow-lg">
+              <div class="card custom-card">
                 <div class="card-body">
                   <p class="card-text">"Kids Castle Montessori has been a wonderful place for our child! The play-based learning keeps them engaged, and we've seen so much growth in their confidence and skills."</p>
                   <div class="stars text-warning">★★★★★</div>
@@ -283,7 +332,7 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-md-4">
-              <div class="card custom-card shadow-lg">
+              <div class="card custom-card ">
                 <div class="card-body">
                   <p class="card-text">"The staff truly cares about each student's well-being and development. It's a wonderful place to grow."</p>
                   <div class="stars text-warning">★★★★★</div>
@@ -292,7 +341,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card custom-card shadow-lg">
+              <div class="card custom-card ">
                 <div class="card-body">
                   <p class="card-text">"My child has blossomed in this supportive environment. Highly recommend this school!"</p>
                   <div class="stars text-warning">★★★★★</div>
@@ -301,7 +350,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card custom-card shadow-lg">
+              <div class="card custom-card">
                 <div class="card-body">
                   <p class="card-text">"We couldn't be happier with the nurturing environment and excellent education."</p>
                   <div class="stars text-warning">★★★★★</div>
@@ -327,6 +376,66 @@
     </div>
   </div>
 </section>
+<section class="events d-flex justify-content-center align-items-center" >
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6 d-flex KidsCastle">
+        <img src="/img/events_pic.png" alt="Kids Castle" >
+      </div>
+      <div class="col-md-6 d-flex flex-column justify-content-center text-center event-text">
+        <h1>Upcoming Events</h1>
+        <p>Don’t miss out on interesting events. Be constantly updated with the events you and your child can participate in.</p>
+        <div class="see-more evenBtn">
+  See More
+</div>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+    
+    <div class="footer-col col-lg-4">
+      <h4><img src="/img/new_logo.png" width="350px" srcset=""></h4>
+      <ul>
+        <li><p class="text-light">The Preschool hours are 9:15 am – 3:30 pm
+        which can be extended till 5:00 pm </p></li>
+      </ul>
+    </div>
+    <div class="footer-col col-lg-4">
+      <h4 class="footer-text">Keep in touch:</h4>
+      <ul>
+        <li class="col"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></li>
+        <li class="col footer-info"><h6 class="text-light">980-3761469</h6></li>
+      </ul>
+      <ul>
+        <li class="col"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></li>
+        <li class="col footer-info"><h6 class="text-light">Khumaltar, Lalitpur, Nepal</h6></li>
+      </ul>
+      <ul>
+        <li class="col"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></li>
+        <li class="col footer-info"><h6 class="text-light">kidscastlemontessori@gmail.com</h6></li>
+      </ul>
+    </div>
+    <div class="footer-socmed footer-col col-lg-4" id="contact">
+      <h4 class="text-light socmed">Follow us:</h4>
+  <ul class="list-unstyled d-flex flex-column align-items-start gap-2 social-links">
+    <li>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a>
+    </li>
+    <li>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+    </li>
+    <li>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+  </div>
+</footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
@@ -342,6 +451,31 @@
 document.querySelector('.popup-image span').onclick = () => {
     document.querySelector('.popup-image').style.display = 'none';
 };
+document.querySelector(".popup").style.display = "none";
+
+document.getElementById("button").addEventListener("click", function() {
+  document.querySelector(".popup").style.display = "flex";
+});
+
+document.querySelector(".close").addEventListener("click", function() {
+  document.querySelector(".popup").style.display = "none";
+});
+function toggleForms() {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+            }
+        };
+         document.querySelector('.close-icon').addEventListener('click', function() {
+        document.querySelector('.popup').style.display = 'none';
+    });
 </script>
 </body>
 </html>
+
