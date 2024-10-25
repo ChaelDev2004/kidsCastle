@@ -127,6 +127,144 @@ button {
     padding-left: 10px;
     width: 200px;
 }
+/* login  */
+
+   .popup {
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            margin-top: -350px;
+            width: 420px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(
+                90deg,
+                rgba(2, 0, 36, 1) 9%,
+                rgba(9, 9, 121, 1) 68%,
+                rgba(0, 91, 255, 1) 97%
+            );
+            backdrop-filter: blur(9px);
+            color: #fff;
+            border-radius: 12px;
+            padding: 30px 40px;
+        }
+        .remember-forgot input{
+         margin-left: -10px;
+        }
+        .remember-forgot a{
+          margin-left: 105px;
+         }
+        .form-title {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder {
+            color: #fff;
+        }
+
+        .login-button {
+            width: 150px;
+            height: 45px;
+            background: #ffa500;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            font-weight: 600;
+            margin-left: 90px;
+            margin-top: 10px;
+        }
+
+        .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+
+        .register-link p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+
+        .close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .close-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .line {
+            margin-top: 4px;
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color: #000;
+        }
+
+        .close-icon:hover .close {
+            background-color: #f0f0f0;
+        }
+
+        .close-icon:hover .line {
+            background-color: #ff0000;
+        }
+
+        .line.one {
+            transform: rotate(45deg);
+            left: 50%;
+            top: 0;
+        }
+
+        .line.two {
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 0;
+        }
 @media only screen and (max-width: 600px) {
   .custom-height {
  
@@ -451,7 +589,7 @@ main .custom-text {
 .about-us {
   position: relative;
   margin-top: -1px;
-  min-height: 100vh;
+  min-height: 130vh;
   font-family: 'Playful', sans-serif;
   
 }
@@ -1004,4 +1142,185 @@ z-index: -1;
 }
 .carousel-control-next, .carousel-control-prev {
   z-index: 1;
+}
+/* events */
+.events{
+overflow: hidden;
+position: relative;
+margin-top: -1px;
+min-height: 50vh;
+font-family: 'Playful', sans-serif;
+}
+.events::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+background-color: #FCFAEE;
+width: 100%;
+height: 100%;
+z-index: -1;
+} 
+.events img{
+  height: 400px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+.events .event-text{
+  width: 400px;
+  margin-top: 130px;
+  
+}
+.events .event-text h1{
+  font-size: 40px;
+  color: #4E5EB1;
+}
+.events .event-text p{
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  width: 500px;
+  text-align: start;
+  color: #4E5EB1;
+}
+
+.events .evenBtn{
+  margin-left: -8px;
+}
+@media (max-width: 600px) {
+  .events {
+    padding-left: 20px;
+    min-height: 50vh;
+  }
+  .events img {
+    height: 200px;
+    margin-left: 100px;
+  }
+  .events .event-text {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .events .evenBtn{
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .events .event-text p{
+    width: 400px;
+    font-size: 17px;
+    text-align: center;
+  }
+}
+/* footer */
+.footer{
+  padding-left: 100px;
+overflow: hidden;
+position: relative;
+margin-top: -1px;
+min-height: 10vh;
+font-family: 'Playful', sans-serif;
+}
+.footer::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+background-color: #4E5EB1;
+width: 100%;
+height: 100%;
+z-index: -1;
+} 
+
+.footer-col p{
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer .footer-text {
+  color: #fff;
+  margin-left: 100px;
+  margin-top: 30px;
+ 
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer ul li svg {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.footer ul li h6 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+.footer-col .footer-info{
+  margin-left: -130px;
+}
+.footer ul li{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.footer .footer-socmed {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.footer .footer-col {
+  margin-bottom: 20px;
+}
+.footer-col h4::before{
+  content: '';
+  left: 0;
+  bottom: -10px;
+  background-color: #FFA500;
+  height: px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding-left: 50px;
+    margin-left: -50px;
+    
+  }
+  .footer-col {
+    margin-bottom: 40px;
+  }
+  .footer ul li h6 {
+    font-size: 14px;
+  }
+  .footer ul li svg {
+    width: 20px;
+    height: 20px;
+  }
+  .footer .footer-text .socmed {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
