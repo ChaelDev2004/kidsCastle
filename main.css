@@ -1701,14 +1701,59 @@ footer {
 /* program routes page */
 
 /* first page */
-.main-program {
-  position: relative;
-  margin-top: 100px;
-  border-radius: 20px;
-  height: 120vh; 
+.custom-paragraph{
+  max-width: 90%;    
+   padding-top: 50px;
+   margin: 0 auto;       
+   letter-spacing: 1px;
+   text-align: center;
+
+}
+.main-programs {
+ position: relative;
+ margin-top: 100px;
+ border-radius: 20px;
+ height: 130vh; 
 }
 
-.main-program::before {
+.main-programs::before {
+ content: "";
+ background-color: #D8E4F4;
+ background-size: cover;
+ width: 100%;
+ height: 60%; 
+ background-position: center;
+ background-repeat: no-repeat;
+ position: absolute;
+ border-radius: 12px;
+ top: 0;
+ left: 0;
+ z-index: -1; /* Place behind the text */
+}
+.main-programs .custom-text h3{
+  font-family: 'poppins', sans-serif;
+  color: #4E5EB1;
+}
+.main-programs .custom-text h1{
+  color: #4E5EB1;
+
+}
+.main-programs .custom-text h1{
+  margin-top: 10px;
+}
+.main-programs .custom-text h3{
+  margin-top: 60px;
+}
+/* program second page */
+.program-page {
+  position: relative;
+  margin-top: -370px;
+  height: 170vh; 
+
+
+ }
+ 
+ .program-page::before {
   content: "";
   background-color: #D8E4F4;
   background-size: cover;
@@ -1721,18 +1766,220 @@ footer {
   top: 0;
   left: 0;
   z-index: -1; /* Place behind the text */
-}
-.main-program .custom-text h3{
-  font-family: 'poppins', sans-serif;
-  color: #4E5EB1;
-}
-.main-program .custom-text h1{
-  color: #4E5EB1;
+ }
+.program-card{
+  text-align: center;
 
 }
-.main-program .custom-text h1{
-  margin-top: 10px;
+
+.program-card img {
+  width: 100%; 
+  height: auto;
 }
-.main-program .custom-text h3{
-  margin-top: 60px;
+.program-card{
+  margin: 2%;
+  background: #B1BCFE;
+  width: 400px;
+  height: 450px;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  transition: .2s all;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+
+
 }
+.program-row .program-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+.program-card p {
+  
+  color: #4E5EB1;
+}
+.program-card h3 {
+  
+  color: #4E5EB1;
+}
+.col-md-6 {
+  display: flex;
+  justify-content: center;
+
+}
+@media screen and (max-width: 600px) {
+  .program-page{
+    
+  height: 300vh; 
+  }
+  
+  .program-page::before{
+   
+    width: 100%;
+  height: 120%; 
+  }
+  .enroll-page::before {
+      margin-top: 50px;
+  }
+  .enroll-page {
+    
+    padding-top: 50px;
+  }
+  .enroll-two{
+    padding-bottom: 1000px;
+  }
+  .enroll-two::before{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1350px) {
+    .program-page{
+      padding: 100px 300px 100px 300px; /* top right bottom left */
+    }
+    .program-page::before{
+      width: 100%;
+    height: 120%; 
+    }
+    .enroll-way{
+      padding: 10px 300px 10px 300px; /* top right bottom left */
+    
+    }
+   
+     .enroll-two::before{
+      width: 100%;
+       height: 100%; 
+       
+      }
+}
+/* enroll page */
+.enroll-page {
+  position: relative;
+  margin-top: 100px;
+  border-radius: 20px;
+  height: 130vh; 
+ }
+ 
+ .enroll-page::before {
+  content: "";
+  background-image: url(/img/enroll-now-bg.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place behind the text */
+ }
+ .custom-enroll .display-3{
+    margin-top: 130px;
+    font-family: 'Poppins', sans-serif;
+    color: #4E5EB1;
+ }
+
+ .custom-enroll .display-6{
+  color: #4E5EB1;
+  font-size: 40px;
+ }
+ .custom-enroll p{
+  width: 500px;
+  margin: 0 auto;
+  color: #4E5EB1;
+  margin-bottom: 30px;
+ }
+ /* second page */
+ .enroll-way{
+  background-color: #FCFAEE;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
+.card-details h1{
+  color: #4E5EB1;
+  font-size: 30px;
+}
+
+.card-details p{
+  color: #000;
+  margin: 15px;
+  font-size: 14px;
+  text-align: left;
+}
+.enroll-card .enroll-btn-1{
+    width: 200px;
+    height: 60px;
+  
+}
+.enroll-btn-2 {
+  width: 200px;
+    height: 60px;
+    
+}
+@media (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+  }
+}
+
+.info-card{
+  width: 390px;
+  height: 600px;
+  border-radius: 20px;
+  background: #FFEEB6;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+ }
+ 
+ .card-details {
+  color: black;
+ 
+  gap: .5em;
+  display: grid;
+
+ }
+ 
+ .action-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #FCBF40;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+ .text-body {
+  color: rgb(134, 134, 134);
+ }
+ 
+ /*Text*/
+ .title {
+  font-size: 2.0em;
+  font-weight: bold;
+ }
+ 
+ /*Hover*/
+ .info-card:hover {
+  border-color: #4E5EB1;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .info-card:hover .action-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
