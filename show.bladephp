@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef9e6; /* Light yellow background */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #2a2a72; /* Dark blue color */
+            font-weight: 600;
+        }
+
+        /* Container for the form */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fdf6c6; /* Light yellow for the form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #f3e4a6; /* Soft yellow border */
+        }
+
+        th {
+            background-color: #fff3c4; /* Lighter yellow for headers */
+            color: #2a2a72; /* Dark blue for text */
+            font-weight: 600;
+        }
+
+        td {
+            background-color: #fffae5; /* Pale yellow for cells */
+            color: #555; /* Darker gray text */
+        }
+
+        /* Optional: Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .form-container {
+                padding: 15px;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Admission Form</h1>
+    <div class="form-container">
+        <h2>Student Information</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Stored</th>
+                    <th>Update Fields</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Form no#</td>
+                    <td>217</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>{{ $respondent->childFirstName }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{ $respondent->childLastName }}</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Birthday</td>
+                    <td>{{ $respondent->dob }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Birthplace</td>
+                    <td>{{ $respondent->placeOfBirth }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>{{ $respondent->age }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{ $respondent->gender }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td>{{ $respondent->religion }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td> {{ $respondent->nationality }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Father's Name</td>
+                    <td>{{ $respondent->fatherFirstName }} {{ $respondent->fatherLastName }}</td>
+                    <td></td>
+                </tr>
+                                <tr>
+                    <td>Father's contact No#</td>
+                    <td>{{ $respondent->fatherContactNumber }}<</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Father's Occupation)</td>
+                    <td>{{ $respondent->fatherOccupation }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mother's Name</td>
+                    <td>{{ $respondent->motherFirstName }} {{ $respondent->motherLastName }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mother's contact No#</td>
+                    <td>{{ $respondent->motherContactNumber }}</<</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mother's Occupation)</td>
+                    <td>{{ $respondent->motherOccupation }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>{{ $respondent->currentAddressCity }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>{{ $respondent->currentAddressState }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Zip Code</td>
+                    <td> {{ $respondent->currentAddressZip }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Grandfather's Name</td>
+                    <td>{{ $respondent->grandfatherName }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Grandmother's Name</td>
+                    <td>{{ $respondent->grandmotherName }}</td>
+                    <td></td>
+                </tr>
+                
+                 <tr>
+                    <td>Grandparent's Contact</td>
+                    <td>{{ $respondent->grandparentContact }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Grandparent's Relationship</td>
+                    <td>{{ $respondent->grandparentRelationship }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Emergency Contact Person:</td>
+                    <td>{{ $respondent->emergencyContactPerson }}</td>
+                    <td></td>
+                </tr><tr>
+                    <td>Emergency Contact Number</td>
+                    <td>{{ $respondent->emergencyContactNumber }}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
