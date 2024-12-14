@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard </title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    /* General Reset */
+* {
+    
+    color: #4E5EB1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Header */
+header {
+    
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #4E5EB1;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 18px;
+    color: #4E5EB1;
+}
+
+/* Report Sections */
+.report-section {
+    padding: 28px;
+    margin-bottom: 30px;
+}
+
+.report-section h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #4E5EB1;
+}
+
+table {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 2px solid #FFEEB6;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.head {
+            background-color: #FFEEB6;
+            color: #4E5EB1;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #FFEEB6;
+        }
+
+        .grade-above li{
+                list-style: none;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    .report-section h2 {
+        font-size: 18px;
+    }
+}
+h2 {
+        font-size: 25px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #4E5EB1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #FFEEB6;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        
+</style>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container-fluid">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="./assets/imgs/school_logo.png" alt="" srcset="" width="200">
+                        </span>
+                       
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </span>
+                        <span class="title">Enrollment Status</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa-regular fa-rectangle-list"></i>
+                        </span>
+                        <span class="title">Admission Form </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa-solid fa-bars-progress"></i>
+                        </span>
+                        <span class="title">Progress Report </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </span>
+                        <span class="title">E-Resources</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="notifacation">
+                    <div class="icon"><i class="fa-regular fa-bell"></i></div>
+                </div>
+
+                <div class="user">
+                
+                    <img src="assets/imgs/aa.png" alt="">
+                </div>
+                
+            </div>
+           
+            <div class="content container-fluid">
+                <header>
+                    <h1>CHILD PROGRESS REPORT</h1>
+                    <h2>ALEESAH RAMA MAHARJAN</h2>
+                </header>
+            
+        
+                <div class="mt-4">
+                    <div class="row">
+                        <!-- First Table -->
+                        <div class="col-md-6">
+                            <section class="report-section">
+                                <h2>Subjects - Academic</h2>
+                                <table class="table table-bordered">
+                                    <thead >
+                                        <tr >
+                                            <th class="head">S.N</th>
+                                            <th class="head">Subject</th>
+                                            <th class="head">1st Term</th>
+                                            <th class="head">2nd Term</th>
+                                            <th class="head">3rd Term</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>English</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Math</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Science</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Social Science</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Nepali</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+            
+                        <!-- Second Table -->
+                        <div class="col-md-6 container-fluid">
+                            <section class="report-section">
+                                <h2>Subjects </h2>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="head">S.N</th>
+                                            <th class="head">Subject</th>
+                                            <th class="head">1st Term</th>
+                                            <th class="head">2nd Term</th>
+                                            <th class="head">3rd Term</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Arts and Crafts</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Storytelling</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Edu Sports</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Montessori Exercises</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Dance Class</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            
+            
+        
+                <!-- General Report -->
+                <div class="row">
+                    <!-- Skills Section -->
+                    <div class="col-md-6">
+                        <h2>Skills</h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="head">Skills</th>
+                                    <th class="head">1st Term</th>
+                                    <th class="head">2nd Term</th>
+                                    <th class="head">3rd Term</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>English Listening</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>English Speaking</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>English Reading</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>English Writing</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nepali Listening</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nepali Speaking</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nepali Reading</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nepali Writing</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <!-- General Report Section -->
+                    <div class="col-md-6">
+                        <h2>General Report</h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="head">Traits</th>
+                                    <th class="head">1st Term</th>
+                                    <th class="head">2nd Term</th>
+                                    <th class="head">3rd Term</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Is well disciplined</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Maintains personal hygiene</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Is socially amicable</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Is self-confident</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                        <!-- Attendance Section -->
+                        <h2>Attendance</h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="head">Atttendance</th>
+                                    <th class="head">1st Term</th>
+                                    <th class="head">2nd Term</th>
+                                    <th class="head">3rd Term</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Total no. of School Days</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Present Day</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Absent Day</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Working Habits -->
+                <div class="container-fluid my-4">
+                    <h2 class="text-center">Working Habits</h2>
+                    <div class="row">
+                        <!-- Left Section: Tables -->
+                        <div class="col-md-8">
+                            <table class="table table-bordered mb-4">
+                                <thead>
+                                    <tr>
+                                        <th class="head">Attitude</th>
+                                        <th class="head">1st Term</th>
+                                        <th class="head">2nd Term</th>
+                                        <th class="head">3rd Term</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Does homework in time</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shows initiative and innovation</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shows neatness in works</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Punctuality</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="head">Activity</th>
+                                        <th class="head">1st Term</th>
+                                        <th class="head">2nd Term</th>
+                                        <th class="head">3rd Term</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Actively interested in class activities</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Participates in sports / indigenous sports</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Takes part in inter-house / class competition</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Social interaction</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="mt-2">Keys: <strong>M:</strong> Mostly, <strong>S:</strong> Sometimes, <strong>N:</strong> Never</p>
+                        </div>
+            
+                        <!-- Right Section: Index -->
+                        <div class="col-md-4 grade-above">
+                            <h2>Index:</h2>
+                            <ul>
+                                <li><strong>Above 90% (A+):</strong> Exceptionally Good / Outstanding</li>
+                                <li><strong>Above 80% (A):</strong> Excellent / Up to class expectation</li>
+                                <li><strong>Above 70% (B+):</strong> Very Good</li>
+                                <li><strong>Above 60% (B):</strong> Good</li>
+                                <li><strong>Above 50% (C+):</strong> Satisfactory, but needs help</li>
+                                <li><strong>Above 40% (C):</strong> Average, needs exceptional help</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
